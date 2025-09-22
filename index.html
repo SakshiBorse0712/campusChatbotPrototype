@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Chatbot Prototype</title>
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+
+<!-- ===== Page 1: College Selection ===== -->
+<div id="collegeScreen" class="screen" style="display:flex;">
+  <div class="box">
+    <h2>Select College</h2>
+    <label for="college">Choose College</label>
+    <select id="college">
+      <option value="">-- Select College --</option>
+      <option>Govt Engineering College</option>
+      <option>Govt Polytechnic College</option>
+      <option>University of Rajasthan</option>
+      <option>IIIT Pune</option>
+      <option>NIT Jaipur</option>
+      <option>IIT Jodhpur</option>
+      <option>MNIT Bhopal</option>
+    </select>
+    <button onclick="gotoLogin()">Next</button>
+  </div>
+</div>
+
+<!-- ===== Page 2: Login ===== -->
+<div id="loginScreen" class="screen">
+  <div class="box">
+    <h2>College Login</h2>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="name@gmail.com or name@yahoo.com" />
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Min 4 characters" />
+    <button onclick="mockLogin()">Login</button>
+  </div>
+</div>
+
+<!-- ===== Page 3: Chatbot ===== -->
+<div id="chatScreen">
+  <div class="chat-container">
+    <!-- Log Panel -->
+    <div class="log-box">
+      <div class="log-header">Recent Chats</div>
+      <div class="log-list" id="logList"></div>
+    </div>
+
+    <!-- Chat Panel -->
+    <div class="chat-box">
+      <div class="chat-header" id="chatHeader">Campus Assistant</div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type your message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
